@@ -99,7 +99,9 @@ public:
 		}
 		// client inbound
 		if(selector.isReady(listener)) {
-
+			logger::info("new connection inblound");
+			sessions.push_back(std::unique_ptr<usession>());
+			auto s = listener.accept(*sessions.back()->socket.get());
 		} else for (auto it = sessions.begin(); it != sessions.end(); ) {
 			usession& sesh = **it;
 

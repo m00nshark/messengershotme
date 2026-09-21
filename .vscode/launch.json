@@ -1,0 +1,52 @@
+{
+    "version": "0.2.0",
+    "configurations": [ {
+            "name": "Linux CMake Debug (clnt)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/binaries/Debug/clnt", 
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/binaries/Debug",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": false
+                }
+            ],
+            "preLaunchTask": "CMake Build"
+        }, {
+            "name": "Linux CMake Debug (srvr)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/binaries/Debug/srvr", 
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/binaries/Debug",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": false
+                }
+            ],
+            "preLaunchTask": "CMake Build"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Run Server + Console (Full Debug)",
+            "configurations": [
+                "Linux CMake Debug (clnt)",
+                "Linux CMake Debug (srvr)"
+            ]
+        }
+    ]
+}
