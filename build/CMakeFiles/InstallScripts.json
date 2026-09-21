@@ -1,0 +1,16 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/taipan/Projects/messengershotme/build/cmake_install.cmake",
+		"/home/taipan/Projects/messengershotme/build/_deps/sfml-build/cmake_install.cmake",
+		"/home/taipan/Projects/messengershotme/build/_deps/sfml-build/src/SFML/cmake_install.cmake",
+		"/home/taipan/Projects/messengershotme/build/_deps/sfml-build/src/SFML/System/cmake_install.cmake",
+		"/home/taipan/Projects/messengershotme/build/_deps/sfml-build/src/SFML/Window/cmake_install.cmake",
+		"/home/taipan/Projects/messengershotme/build/_deps/sfml-build/src/SFML/Network/cmake_install.cmake",
+		"/home/taipan/Projects/messengershotme/build/_deps/sfml-build/src/SFML/Graphics/cmake_install.cmake",
+		"/home/taipan/Projects/messengershotme/build/_deps/sheenbidi-build/cmake_install.cmake",
+		"/home/taipan/Projects/messengershotme/build/_deps/sfml-build/src/SFML/Audio/cmake_install.cmake",
+		"/home/taipan/Projects/messengershotme/build/_deps/imgui-sfml-build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

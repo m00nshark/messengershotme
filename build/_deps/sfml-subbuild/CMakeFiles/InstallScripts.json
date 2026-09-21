@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/taipan/Projects/messengershotme/build/_deps/sfml-subbuild/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

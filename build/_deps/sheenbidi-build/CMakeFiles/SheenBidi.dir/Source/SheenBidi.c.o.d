@@ -1,0 +1,145 @@
+_deps/sheenbidi-build/CMakeFiles/SheenBidi.dir/Source/SheenBidi.c.o: \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/SheenBidi.c \
+ /usr/include/stdc-predef.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Headers/SheenBidi/SBConfig.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Headers/SheenBidi/SheenBidi.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Headers/SheenBidi/SBAlgorithm.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Headers/SheenBidi/SBBase.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/libc-header-start.h \
+ /usr/include/features.h /usr/include/features-time64.h \
+ /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
+ /usr/include/sys/cdefs.h /usr/include/bits/long-double.h \
+ /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /usr/include/bits/time64.h /usr/include/bits/wchar.h \
+ /usr/include/bits/stdint-intn.h /usr/include/bits/stdint-uintn.h \
+ /usr/include/bits/stdint-least.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Headers/SheenBidi/SBBidiType.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Headers/SheenBidi/SBCodepointSequence.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Headers/SheenBidi/SBCodepoint.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Headers/SheenBidi/SBGeneralCategory.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Headers/SheenBidi/SBScript.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Headers/SheenBidi/SBParagraph.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Headers/SheenBidi/SBLine.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Headers/SheenBidi/SBRun.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Headers/SheenBidi/SBAllocator.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Headers/SheenBidi/SBAttributeInfo.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Headers/SheenBidi/SBAttributeRegistry.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Headers/SheenBidi/SBMirrorLocator.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Headers/SheenBidi/SBScriptLocator.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Headers/SheenBidi/SBText.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Headers/SheenBidi/SBTextConfig.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Headers/SheenBidi/SBTextIterators.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Headers/SheenBidi/SBAttributeList.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Headers/SheenBidi/SBTextType.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Headers/SheenBidi/SBVersion.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBAlgorithm.c \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/stddef.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBBase.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBCodepointSequence.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBLog.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBParagraph.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Core/Object.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Core/AtomicUInt.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/stdatomic.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Core/Memory.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBAlgorithm.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBAllocator.c \
+ /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/bits/floatn.h \
+ /usr/include/bits/floatn-common.h /usr/include/sys/types.h \
+ /usr/include/bits/types/clock_t.h /usr/include/bits/types/clockid_t.h \
+ /usr/include/bits/types/time_t.h /usr/include/bits/types/timer_t.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/endianness.h /usr/include/bits/byteswap.h \
+ /usr/include/bits/uintn-identity.h /usr/include/sys/select.h \
+ /usr/include/bits/select.h /usr/include/bits/types/sigset_t.h \
+ /usr/include/bits/types/__sigset_t.h \
+ /usr/include/bits/types/struct_timeval.h \
+ /usr/include/bits/types/struct_timespec.h \
+ /usr/include/bits/pthreadtypes.h /usr/include/bits/thread-shared-types.h \
+ /usr/include/bits/pthreadtypes-arch.h \
+ /usr/include/bits/atomic_wide_counter.h /usr/include/bits/struct_mutex.h \
+ /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
+ /usr/include/bits/types/once_flag.h /usr/include/bits/stdlib-float.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Core/AtomicPointer.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Core/Once.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Core/AtomicFlag.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Core/ThreadFence.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Core/ThreadLocalStorage.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBAllocator.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBAttributeList.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBAttributeRegistry.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBBase.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBBase.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBCodepoint.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBAssert.h \
+ /usr/include/assert.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Data/BidiTypeLookup.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBCodepoint.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Data/GeneralCategoryLookup.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Data/PairingLookup.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/UBA/BracketType.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Data/ScriptLookup.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBCodepoint.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBCodepointSequence.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBCodepointSequence.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBLine.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBAlgorithm.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBAllocator.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBLine.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBLog.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBMirrorLocator.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBLine.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBMirrorLocator.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBParagraph.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/UBA/BidiChain.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/UBA/IsolatingRun.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/UBA/BracketQueue.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/UBA/LevelRun.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/UBA/RunExtrema.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/UBA/RunKind.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/UBA/RunQueue.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/UBA/StatusStack.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBParagraph.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBScriptLocator.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Script/ScriptStack.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBScriptLocator.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBText.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBTextConfig.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/API/SBTextIterators.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Core/List.c \
+ /usr/include/string.h /usr/include/bits/types/locale_t.h \
+ /usr/include/bits/types/__locale_t.h /usr/include/strings.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Core/List.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Core/Memory.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Core/Memory.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Core/Object.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Core/Object.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Core/Once.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Core/Once.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Data/BidiTypeLookup.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Data/BidiTypeLookup.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Data/GeneralCategoryLookup.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Data/GeneralCategoryLookup.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Data/PairingLookup.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Data/PairingLookup.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Data/ScriptLookup.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Data/ScriptLookup.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Script/ScriptStack.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Script/ScriptStack.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Text/AttributeDictionary.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/Text/AttributeManager.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/UBA/BidiChain.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/UBA/BidiChain.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/UBA/BracketQueue.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/UBA/BracketQueue.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/UBA/IsolatingRun.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/UBA/IsolatingRun.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/UBA/LevelRun.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/UBA/LevelRun.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/UBA/RunQueue.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/UBA/RunQueue.h \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/UBA/StatusStack.c \
+ /home/taipan/Projects/messengershotme/build/_deps/sheenbidi-src/Source/UBA/StatusStack.h

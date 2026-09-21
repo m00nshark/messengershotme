@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -Wl,--dependency-file=CMakeFiles/srvr.dir/link.d CMakeFiles/srvr.dir/src/server.cpp.o -o /home/taipan/Projects/messengershotme/binaries/Debug/srvr  _deps/sfml-build/lib/libsfml-network-s-d.a _deps/sfml-build/lib/libsfml-system-s-d.a -lrt -lresolv /usr/lib/libssh2.so /usr/lib/libmbedtls.so /usr/lib/libmbedcrypto.so /usr/lib/libmbedx509.so
