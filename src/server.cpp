@@ -11,10 +11,11 @@ struct uprofile {
 };
 struct usession {
 	std::unique_ptr<sf::TcpSocket> socket;
-	globs_uid_t bound_uid;
+	globs_uid_t bound_uid = 0;
+	bool is_tcp = false;
 	bool is_allowed = false;
 	bool is_rejected = false;
-	usession(std::unique_ptr<sf::TcpSocket> insocket): socket(std::move(insocket)), bound_uid(0) {};
+	usession(std::unique_ptr<sf::TcpSocket> insocket): socket(std::move(insocket)) {};
 };
 
 std::string read_from_file(const std::string& filename) {
@@ -62,9 +63,21 @@ private:
 			send_packet(sf_packet, sesh_ptr.get());
 		}
 	}
+	
+	void broadcast_packet (globs::packet& packet) {
+		sf::Packet sf_packet = globs::pack_into_sf_packet(packet);
+		for (auto& sesh_ptr : sessions) { // sesh_ptr.get() returns raw usession*, that lies there
+			if (!sesh_ptr->is_allowed) {
+				continue;// denying the session that is not allowed
+			}
+			send_packet(sf_packet, sesh_ptr.get());
+		}
+	}
 
-	void delete_socket () {
-
+	void delete_socket (sf::TcpSocket& sock, std::vector<std::unique_ptr<usession>>::iterator& it) {
+		sock.disconnect();
+		selector.remove(sock);
+		it = sessions.erase(it);
 	}
 
 public:
@@ -90,35 +103,95 @@ public:
 		// server ping
 		if(!selector.wait(selector_timeout)) {
 			if(ping_clock.getElapsedTime() > ping_interval){
-				char ping_payload[globs::ping_char_array_size];
+				char ping_payload[globs::ping_char_array_size] = "TEST";
 				globs::packet packet{globs::packet_type::ping, {}, 0, {}, 0, {}, {}};
 				std::memcpy(packet.ping, ping_payload, globs::ping_char_array_size);
-				return;
+				broadcast_packet(packet);
 			}
 			return;
 		}
 		// client inbound
 		if(selector.isReady(listener)) {
-			logger::info("new connection inblound");
-			sessions.push_back(std::unique_ptr<usession>());
-			auto s = listener.accept(*sessions.back()->socket.get());
+			std::unique_ptr<sf::TcpSocket> new_socket = std::make_unique<sf::TcpSocket>();
+			sf::Socket::Status s = listener.accept(*new_socket);
+			if(s == sf::Socket::Status::Error || s == sf::Socket::Status::Disconnected) {
+				logger::warn("error accepting inbound connection");
+				return;
+			}
+			if(selector.add(*new_socket)) {
+			
+			} else {
+				logger::warn("error adding new connection's socket to selector");
+				return;
+			}
+			new_socket->setBlocking(false);
+			new_socket->setupTlsServer(cert_crt, cert_key);
+			std::unique_ptr<usession> new_session;
+			new_session = std::make_unique<usession>(std::move(new_socket));
+			sessions.push_back(std::move(new_session));
+			logger::info("new session inbound, started TLS handshake");
 		} else for (auto it = sessions.begin(); it != sessions.end(); ) {
 			usession& sesh = **it;
-
 			sf::TcpSocket& sock = *(sesh.socket);
+
+			if(!sesh.is_tcp) {
+				sf::TcpSocket::TlsStatus s = sesh.socket->setupTlsServer(cert_crt, cert_key);
+				if(s == sf::TcpSocket::TlsStatus::HandshakeComplete) {
+					logger::info("new client established TLS encryption, waiting for auth");
+					sesh.is_tcp = true;
+					it++;
+					continue;
+				} else if (s == sf::TcpSocket::TlsStatus::NotConnected || s == sf::TcpSocket::TlsStatus::Error) {
+					logger::warn("new client failed to establish TLS connection, disconnecting it.");
+					sock.disconnect();
+					selector.remove(sock);
+					it = sessions.erase(it);
+					continue;
+				} // else it's awaiting TLS handshake packets
+				it++;
+				continue;
+			}
+
+			sf::Packet rx_packet;
+			sf::Socket::Status rx_status = sock.receive(rx_packet);
+			
 
 			if (!selector.isReady(sock)) {
 				it++;
 				continue; 
 			}
 
-			if(!sesh.is_allowed) {
-				
-				continue;
+			if(sesh.is_rejected) {
+				if(rx_status == sf::Socket::Status::Disconnected || rx_status == sf::Socket::Status::Error) {
+					sock.disconnect();
+					selector.remove(sock);
+					it = sessions.erase(it);
+					continue;
+				} else {
+					it++;
+					continue;
+				}
 			}
 
-			sf::Packet rx_packet;
-			auto rx_status = sock.receive(rx_packet);
+
+			if(!sesh.is_allowed) {
+				if (rx_status == sf::Socket::Status::Done) {
+					globs::packet auth_p; 
+					if(globs::unpack_from_sf_packet(rx_packet, &auth_p) && auth_p.type == globs::packet_type::client_info) {
+						
+						it++;
+						continue;
+					};
+				} else if(rx_status == sf::Socket::Status::Disconnected || rx_status == sf::Socket::Status::Error) {
+					logger::warn("new client disconnected or failed to auth.");
+					sock.disconnect();
+					selector.remove(sock);
+					it = sessions.erase(it);
+					continue;
+				}
+				it++;
+				continue;
+			}
 
 			if(rx_status == sf::Socket::Status::Error || rx_status == sf::Socket::Status::Disconnected) {
 

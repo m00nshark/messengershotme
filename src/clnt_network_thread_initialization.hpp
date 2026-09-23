@@ -25,7 +25,7 @@ inline bool initialize_tls(sf::TcpSocket* socket, sf::IpAddress server_addr) {
     socket->setBlocking(false);
     std::string cert_crt = "";
     if(glob_is_requiring_tls_verified) {
-        cert_crt = read_from_file("server.crt");
+        cert_crt = read_from_file("server2.crt");
     }
     short timeout = 0, max_timeout = 10;
 /**/while (tls_status == tls_status_class::establishing && status == connection_status::connected){
