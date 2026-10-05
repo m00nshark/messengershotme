@@ -44,13 +44,10 @@ FetchContent_Declare(ImGui-SFML
     SYSTEM)
 FetchContent_MakeAvailable(ImGui-SFML)
 
-add_executable(clnt src/client.cpp
-    src/clnt_globs.hpp
-    src/clnt_network_thread.hpp
-    src/clnt_network_thread_initialization.hpp)
+add_executable(clnt srcc/main.cpp)
 target_link_libraries(clnt PRIVATE SFML::Graphics SFML::Network SFML::Audio ImGui-SFML::ImGui-SFML)
 
-add_executable(srvr src/server.cpp)
+add_executable(srvr srcs/main.cpp)
 target_link_libraries(srvr PRIVATE SFML::Network)
 
 set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT clnt)
